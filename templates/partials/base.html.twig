@@ -14,13 +14,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/styles.css', 100) %}
+        {% do assets.addCss('theme://css/styles.css') %}
 		{% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css') %}
     {% endblock %}
 
     {% block javascripts %}
         {% do assets.addJs('https://use.fontawesome.com/releases/v5.15.1/js/all.js') %}
-        {% do assets.addJs('theme://js/sripts.js', {group:'bottom'}) %}
+        
     {% endblock %}
 
     {% block assets deferred %}
@@ -35,12 +35,16 @@
 		{% include 'partials/navigation.html.twig'%}
 	{% endblock %}
 
-	{# {% block header %}
-		{% include 'partials/header.html.twig' %}
-	{% endblock %} #}
-
 	{% block body %}
 		{% block content %}{% endblock %}
 	{% endblock %}
+
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+
+    {% block bottom deferred %}
+        {{ assets.js('bottom')|raw }}
+    {% endblock %}
 </body>
 </html>
