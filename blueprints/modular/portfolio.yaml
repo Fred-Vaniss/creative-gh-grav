@@ -1,0 +1,29 @@
+title: Portfolio
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            unset-content@: true
+
+            header.portfolio:
+              name: portfolio
+              type: list
+              label: Portfolio
+              style: vertical
+
+              fields:
+                  .name:
+                    type: text
+                    label: Name
+                  .category:
+                    type: text
+                    label: Category
+                  .img:
+                    type: filepicker
+                    folder: 'self@'
+                    preview_images: true
+                    label: Image file name
