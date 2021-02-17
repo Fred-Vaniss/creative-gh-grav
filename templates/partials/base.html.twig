@@ -1,0 +1,46 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/styles.css', 100) %}
+		{% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css') %}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% do assets.addJs('https://use.fontawesome.com/releases/v5.15.1/js/all.js') %}
+        {% do assets.addJs('theme://js/sripts.js', {group:'bottom'}) %}
+    {% endblock %}
+
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
+
+{% endblock head %}
+</head>
+<body id="page-top">
+	{% block nav %}
+		{% include 'partials/navigation.html.twig'%}
+	{% endblock %}
+
+	{# {% block header %}
+		{% include 'partials/header.html.twig' %}
+	{% endblock %} #}
+
+	{% block body %}
+		{% block content %}{% endblock %}
+	{% endblock %}
+</body>
+</html>

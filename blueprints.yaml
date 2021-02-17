@@ -1,0 +1,32 @@
+name: Creative-gh
+slug: creative-gh
+type: theme
+version: 1
+description: "Bootstrap Creative theme"
+icon: empire
+author:
+  name: Frédérick Van Isschot
+  email: fred.vaniss@gmail.com
+  url: https://fred-vaniss.be
+homepage: https://github.com/getgrav/grav-theme-antimatter
+demo: https://demo.getgrav.org/blog-skeleton
+keywords: bootstrap, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-antimatter/issues
+license: MIT
+
+dependencies:
+    - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
