@@ -1,0 +1,29 @@
+title: Master Header
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            unset-content@: true
+            unset-header.media_order@: true
+            header.description:
+              type: textarea
+              style: vertical
+              label: Description
+
+            header.buttons:
+              name: buttons
+              type: list
+              label: Buttons
+              style: vertical
+
+              fields:
+                  .text:
+                    type: text
+                    label: Text
+                  .url:
+                    type: text
+                    label: URL

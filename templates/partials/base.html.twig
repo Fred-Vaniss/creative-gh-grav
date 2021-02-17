@@ -20,7 +20,11 @@
 
     {% block javascripts %}
         {% do assets.addJs('https://use.fontawesome.com/releases/v5.15.1/js/all.js') %}
-        
+        {% do assets.addJs('https://code.jquery.com/jquery-3.5.1.slim.min.js', {'priority':104,'group':'bottom'}) %}
+        {% do assets.addJs('https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', {'priority':103,'group':'bottom'}) %}
+        {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js', {'priority':102,'group':'bottom'}) %}
+        {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', {'priority':101,'group':'bottom'}) %}
+        {% do assets.addJs('theme://js/scripts.js', {'priority':100,'group':'bottom'}) %}
     {% endblock %}
 
     {% block assets deferred %}

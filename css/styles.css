@@ -10054,20 +10054,25 @@ hr.light {
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
-  #mainNav.navbar-scrolled {
+  #mainNav.navbar-scrolled,  
+  #mainNav.always-visible {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
   }
-  #mainNav.navbar-scrolled .navbar-brand {
+  #mainNav.navbar-scrolled .navbar-brand,
+  #mainNav.always-visible .navbar-brand {
     color: #212529;
   }
-  #mainNav.navbar-scrolled .navbar-brand:hover {
+  #mainNav.navbar-scrolled .navbar-brand:hover,
+  #mainNav.always-visible .navbar-brand:hover {
     color: #f4623a;
   }
-  #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
+  #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link,
+  #mainNav.always-visible .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
-  #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+  #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover,
+  #mainNav.always-visible .navbar-nav .nav-item .nav-link:hover {
     color: #f4623a;
   }
 }

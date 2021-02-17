@@ -1,0 +1,28 @@
+title: Services
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            unset-content@: true
+            unset-header.media_order@: true
+
+            header.services:
+              name: services
+              type: list
+              label: Services
+              style: vertical
+
+              fields:
+                  .title:
+                    type: text
+                    label: Title
+                  .subtitle:
+                    type: text
+                    label: Subtitle
+                  .icon:
+                    type: text
+                    label: Icon
