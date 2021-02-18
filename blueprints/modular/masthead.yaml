@@ -8,7 +8,7 @@ form:
         content:
           fields:
             unset-content@: true
-            unset-header.media_order@: true
+
             header.description:
               type: textarea
               style: vertical

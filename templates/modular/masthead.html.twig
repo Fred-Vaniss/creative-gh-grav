@@ -1,5 +1,9 @@
 <!-- Masthead-->
-<header class="masthead">
+{% if page.media.images %}
+	{% set bg_img = page.media.images|first.url() %}
+{% endif %}
+
+<header class="masthead" {% if bg_img %}style="background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url({{bg_img}}) center no-repeat; background-size: cover"{% endif %}>
 	<div class="container h-100">
 		<div class="row h-100 align-items-center justify-content-center text-center">
 			<div class="col-lg-10 align-self-end">
