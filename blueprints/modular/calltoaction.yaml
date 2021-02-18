@@ -1,0 +1,25 @@
+title: 'Call to action'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            unset-content@: true
+            unset-header.media_order@: true
+
+            header.buttons:
+              name: buttons
+              type: list
+              label: Buttons
+              style: vertical
+
+              fields:
+                  .text:
+                    type: text
+                    label: Text
+                  .url:
+                    type: text
+                    label: URL

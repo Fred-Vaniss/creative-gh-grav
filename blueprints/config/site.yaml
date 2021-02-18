@@ -1,0 +1,22 @@
+'@extends': site
+
+form:
+  fields:
+    menu:
+      type: section
+      title: Creative-gm header menu
+      underline: true
+      
+      fields:
+        menu:
+          name: menu
+          type: list
+          label: Header menu
+          
+          fields:
+            .text:
+              type: text
+              label: Text
+            .url:
+              type: text
+              label: URL
