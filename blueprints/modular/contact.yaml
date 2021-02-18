@@ -1,0 +1,25 @@
+title: Contact
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            unset-content@: true
+            unset-header.media_order@: true
+            header.text:
+              type: textarea
+              style: vertical
+              label: Text
+
+            header.phone:
+              name: phone
+              type: text
+              label: Phone number
+
+            header.mail:
+              name: mail
+              type: text
+              label: Mail adress
